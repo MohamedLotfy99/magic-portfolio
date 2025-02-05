@@ -205,4 +205,4 @@ const about = {
 };
 
 
-export { person, social, home, about };
+export { person, social, home, about};
