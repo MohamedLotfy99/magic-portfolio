@@ -1,15 +1,15 @@
 import { InlineCode } from "@/once-ui/components";
 
 const person = {
-  firstName: "Selene",
-  lastName: "Yu",
+  firstName: "Mohamed Adel",
+  lastName: "Lotfy",
   get name() {
     return `${this.firstName} ${this.lastName}`;
   },
-  role: "Design Engineer",
+  role: "Computer Engineer",
   avatar: "/images/avatar.jpg",
-  location: "Asia/Jakarta", // Expecting the IANA time zone identifier, e.g., 'Europe/Vienna'
-  languages: ["English", "Bahasa"], // optional: Leave the array empty if you don't want to display languages
+  location: "Africa/Cairo", // Expecting the IANA time zone identifier, e.g., 'Europe/Vienna'
+  languages: ["Arabic", "English", "German"], // optional: Leave the array empty if you don't want to display languages
 };
 
 const newsletter = {
@@ -29,12 +29,12 @@ const social = [
   {
     name: "GitHub",
     icon: "github",
-    link: "https://github.com/once-ui-system/nextjs-starter",
+    link: "https://github.com/MohamedLotfy99",
   },
   {
     name: "LinkedIn",
     icon: "linkedin",
-    link: "https://www.linkedin.com/company/once-ui/",
+    link: "www.linkedin.com/in/malotfy",
   },
   {
     name: "X",
@@ -44,7 +44,7 @@ const social = [
   {
     name: "Email",
     icon: "email",
-    link: "mailto:example@gmail.com",
+    link: "malotfe99@gmail.com",
   },
 ];
 
@@ -52,11 +52,11 @@ const home = {
   label: "Home",
   title: `${person.name}'s Portfolio`,
   description: `Portfolio website showcasing my work as a ${person.role}`,
-  headline: <>Design engineer and builder</>,
+  headline: <>Computer Engineer</>,
   subline: (
     <>
-      I'm Selene, a design engineer at <InlineCode>FLY</InlineCode>, where I craft intuitive
-      <br /> user experiences. After hours, I build my own projects.
+      I'm {person.name}, a {person.role} graduate from <a href="https://www.asu.edu.eg/1185/page/faculty-of-engineering">Ain Shams University, Faculty of engineering</a>,
+      <br /> Passionate to produce intuitive UI/UX applications and websites.
     </>
   ),
 };
@@ -81,9 +81,8 @@ const about = {
     title: "Introduction",
     description: (
       <>
-        Selene is a Jakarta-based design engineer with a passion for transforming complex challenges
-        into simple, elegant design solutions. Her work spans digital interfaces, interactive
-        experiences, and the convergence of design and technology.
+        Mohamed is an Experienced Full Stack Developer proficient in multiple programming languages, with a strong focus on front-end development and Android applications. 
+        Skilled in building dynamic, user-friendly interfaces. Passionate about game development, always exploring innovative technologies to create engaging digital experiences.
       </>
     ),
   },
