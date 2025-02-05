@@ -12,13 +12,12 @@ import {
   SmartImage,
 } from "@/once-ui/components";
 
-import { baseURL, routes } from "@/app/resources";
+import { routes } from "@/app/resources";
 import { home, about, person } from "@/app/resources/content";
 
 export async function generateMetadata() {
   const title = home.title;
   const description = home.description;
-  const ogImage = `https://${baseURL}/og?title=${encodeURIComponent(title)}`;
 
   return {
     title,
@@ -27,19 +26,11 @@ export async function generateMetadata() {
       title,
       description,
       type: "website",
-      url: `https://${baseURL}`,
       images: [
         {
-          url: ogImage,
           alt: title,
         },
       ],
-    },
-    twitter: {
-      card: "summary_large_image",
-      title,
-      description,
-      images: [ogImage],
     },
   };
 }
@@ -56,14 +47,11 @@ export default function Home() {
             "@type": "WebPage",
             name: home.title,
             description: home.description,
-            url: `https://${baseURL}`,
-            image: `${baseURL}/og?title=${encodeURIComponent(home.title)}`,
             publisher: {
               "@type": "Person",
               name: person.name,
               image: {
                 "@type": "ImageObject",
-                url: `${baseURL}${person.avatar}`,
               },
             },
           }),
