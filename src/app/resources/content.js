@@ -7,13 +7,13 @@ const person = {
     return `${this.firstName} ${this.lastName}`;
   },
   role: "Computer Engineer",
-  avatar: "/images/avatar.jpg",
+  avatar: "/images/myImage.jpg",
   location: "Africa/Cairo", // Expecting the IANA time zone identifier, e.g., 'Europe/Vienna'
   languages: ["Arabic", "English", "German"], // optional: Leave the array empty if you don't want to display languages
 };
 
 const newsletter = {
-  display: true,
+  display: false,
   title: <>Subscribe to {person.firstName}'s Newsletter</>,
   description: (
     <>
@@ -34,17 +34,17 @@ const social = [
   {
     name: "LinkedIn",
     icon: "linkedin",
-    link: "www.linkedin.com/in/malotfy",
+    link: "https://www.linkedin.com/in/malotfy/",
   },
   {
-    name: "X",
-    icon: "x",
-    link: "",
+    name: "+01096636317",
+    icon: "phone",
+    link: "/about",
   },
   {
-    name: "Email",
+    name: "malotfe99@gmail.com",
     icon: "email",
-    link: "malotfe99@gmail.com",
+    link: "/about"
   },
 ];
 
@@ -73,7 +73,7 @@ const about = {
     display: true,
   },
   calendar: {
-    display: true,
+    display: false,
     link: "https://cal.com",
   },
   intro: {
@@ -86,63 +86,57 @@ const about = {
       </>
     ),
   },
-  work: {
+  education: {
     display: true, // set to false to hide this section
-    title: "Work Experience",
+    title: "Education",
     experiences: [
       {
-        company: "FLY",
-        timeframe: "2022 - Present",
-        role: "Senior Design Engineer",
+        company: "Ain Shams University, Faculty of Engineering",
+        timeframe: "2018 - 2023",
+        role: "Computer Engineering and Software Systems",
         achievements: [
           <>
-            Redesigned the UI/UX for the FLY platform, resulting in a 20% increase in user
-            engagement and 30% faster load times.
+            Graduated with <b>B+</b> GPA.
           </>,
           <>
-            Spearheaded the integration of AI tools into design workflows, enabling designers to
-            iterate 50% faster.
+            Achieved <b className="Text:bold">A+</b> on my video game graduation
+            project "A Giants Conscience: The Evil Seed"
           </>,
         ],
         images: [
           // optional: leave the array empty if you don't want to display images
           {
-            src: "/images/projects/project-01/cover-01.jpg",
-            alt: "Once UI Project",
+            src: "/images/projects/project-01/GradProject.jpg",
+            alt: "Game Poster",
             width: 16,
-            height: 9,
+            height: 19,
           },
         ],
       },
-      {
-        company: "Creativ3",
-        timeframe: "2018 - 2022",
-        role: "Lead Designer",
-        achievements: [
-          <>
-            Developed a design system that unified the brand across multiple platforms, improving
-            design consistency by 40%.
-          </>,
-          <>
-            Led a cross-functional team to launch a new product line, contributing to a 15% increase
-            in overall company revenue.
-          </>,
-        ],
-        images: [],
-      },
     ],
   },
-  studies: {
+  courses: {
     display: true, // set to false to hide this section
-    title: "Studies",
+    title: "Courses",
     institutions: [
       {
-        name: "University of Jakarta",
-        description: <>Studied software engineering.</>,
+        name: "Ethical Hacking Workshop",
+        role: "NTI Egypt",
+        timeframe: "Sept 2022",
+        description: <>Studied vulnerability detection, exploitation, prevention, and
+        security awareness.</>,
       },
       {
-        name: "Build the Future",
-        description: <>Studied online marketing and personal branding.</>,
+        name: "Data Science Workshop",
+        role: "Sprints",
+        timeframe: "Sept 2021",
+        description: <>Studied data cleaning, organization, and categorization.</>,
+      },
+      {
+        name: "Android Development Workshop",
+        role: "Sprints",
+        timeframe: "Sept 2020",
+        description: <>Studied Rest APIs, data storage & manipulation, layouts and style creation.</>,
       },
     ],
   },
@@ -151,35 +145,70 @@ const about = {
     title: "Technical skills",
     skills: [
       {
-        title: "Figma",
-        description: <>Able to prototype in Figma with Once UI with unnatural speed.</>,
+        title: "Expert",
+        achievements: [
+          <>
+            Android Studio
+          </>,
+          <>
+            Unreal Engine
+          </>,
+          <>
+            Python
+          </>,
+          <>
+            Kotlin
+          </>,         
+          <>
+            JavaScript
+          </>,
+          <>
+            Git
+          </>,
+          <>
+            HTML
+          </>,
+          <>
+            CSS
+          </>,
+        ],
         // optional: leave the array empty if you don't want to display images
         images: [
-          {
-            src: "/images/projects/project-01/cover-02.jpg",
-            alt: "Project image",
-            width: 16,
-            height: 9,
-          },
-          {
-            src: "/images/projects/project-01/cover-03.jpg",
-            alt: "Project image",
-            width: 16,
-            height: 9,
-          },
+
         ],
       },
       {
-        title: "Next.js",
-        description: <>Building next gen apps with Next.js + Once UI + Supabase.</>,
+        title: "Intermediate",
         // optional: leave the array empty if you don't want to display images
+        achievements:[
+          <>
+            Angular
+          </>,
+          <>
+            NodeJS
+          </>,
+          <>
+            TypeScript
+          </>,
+        ],
         images: [
-          {
-            src: "/images/projects/project-01/cover-04.jpg",
-            alt: "Project image",
-            width: 16,
-            height: 9,
-          },
+
+        ],
+      },
+      {
+        title: "Novice",
+        achievements: [
+          <>
+            SQL
+          </>,
+          <>
+            Autopsy
+          </>,
+          <>OSForensics</>,
+          <>WinHex</>,
+        ],
+        images: [
+
         ],
       },
     ],

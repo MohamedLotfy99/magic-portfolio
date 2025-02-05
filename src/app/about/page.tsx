@@ -6,6 +6,7 @@ import {
   Heading,
   Icon,
   IconButton,
+  Row,
   SmartImage,
   Tag,
   Text,
@@ -52,14 +53,16 @@ export default function About() {
       items: [],
     },
     {
-      title: about.work.title,
-      display: about.work.display,
-      items: about.work.experiences.map((experience) => experience.company),
+      title: about.education.title,
+      display: about.education.display,
+      items: about.education.experiences.map(
+        (experience) => experience.company
+      ),
     },
     {
-      title: about.studies.title,
-      display: about.studies.display,
-      items: about.studies.institutions.map((institution) => institution.name),
+      title: about.courses.title,
+      display: about.courses.display,
+      items: about.courses.institutions.map((institution) => institution.name),
     },
     {
       title: about.technical.title,
@@ -84,9 +87,9 @@ export default function About() {
             sameAs: social
               .filter((item) => item.link && !item.link.startsWith("mailto:")) // Filter out empty links and email links
               .map((item) => item.link),
-            worksFor: {
+            educationsFor: {
               "@type": "Organization",
-              name: about.work.experiences[0].company || "",
+              name: about.education.experiences[0].company || "",
             },
           }),
         }}
@@ -226,18 +229,18 @@ export default function About() {
             </Column>
           )}
 
-          {about.work.display && (
+          {about.education.display && (
             <>
               <Heading
                 as="h2"
-                id={about.work.title}
+                id={about.education.title}
                 variant="display-strong-s"
                 marginBottom="m"
               >
-                {about.work.title}
+                {about.education.title}
               </Heading>
               <Column fillWidth gap="l" marginBottom="40">
-                {about.work.experiences.map((experience, index) => (
+                {about.education.experiences.map((experience, index) => (
                   <Column
                     key={`${experience.company}-${experience.role}-${index}`}
                     fillWidth
@@ -310,26 +313,47 @@ export default function About() {
             </>
           )}
 
-          {about.studies.display && (
+          {about.courses.display && (
             <>
               <Heading
                 as="h2"
-                id={about.studies.title}
+                id={about.courses.title}
                 variant="display-strong-s"
                 marginBottom="m"
               >
-                {about.studies.title}
+                {about.courses.title}
               </Heading>
               <Column fillWidth gap="l" marginBottom="40">
-                {about.studies.institutions.map((institution, index) => (
+                {about.courses.institutions.map((institution, index) => (
                   <Column
-                    key={`${institution.name}-${index}`}
+                    key={`${(institution.name, institution.role)}-${index}`}
                     fillWidth
                     gap="4"
                   >
-                    <Text id={institution.name} variant="heading-strong-l">
-                      {institution.name}
+                    <Flex
+                      fillWidth
+                      horizontal="space-between"
+                      vertical="end"
+                      marginBottom="4"
+                    >
+                      <Text id={institution.name} variant="heading-strong-l">
+                        {institution.name}
+                      </Text>
+                      <Text
+                        variant="heading-default-xs"
+                        onBackground="neutral-weak"
+                      >
+                        {institution.timeframe}
+                      </Text>
+                    </Flex>
+                    <Text
+                      variant="body-default-s"
+                      onBackground="brand-weak"
+                      marginBottom="m"
+                    >
+                      {institution.role}
                     </Text>
+
                     <Text
                       variant="heading-default-xs"
                       onBackground="neutral-weak"
@@ -352,13 +376,27 @@ export default function About() {
               >
                 {about.technical.title}
               </Heading>
-              <Column fillWidth gap="l">
+              <Row fillWidth gap="l">
                 {about.technical.skills.map((skill, index) => (
-                  <Column key={`${skill}-${index}`} fillWidth gap="4">
+                  <Column key={`${skill.title}-${index}`} fillWidth gap="4">
                     <Text variant="heading-strong-l">{skill.title}</Text>
-                    <Text variant="body-default-m" onBackground="neutral-weak">
+                    <Column>
+                      {skill.achievements?.map(
+                        (achievement: JSX.Element, index: number) => (
+                          <Text
+                            as="li"
+                            variant="heading-default-xs"
+                            onBackground="neutral-weak"
+                            key={`${skill.title}-${index}`}
+                          >
+                            {achievement}
+                          </Text>
+                        )
+                      )}
+                    </Column>
+                    {/* <Text variant="body-default-m" onBackground="neutral-weak">
                       {skill.description}
-                    </Text>
+                    </Text> */}
                     {skill.images && skill.images.length > 0 && (
                       <Flex fillWidth paddingTop="m" gap="12" wrap>
                         {skill.images.map((image, index) => (
@@ -387,7 +425,7 @@ export default function About() {
                     )}
                   </Column>
                 ))}
-              </Column>
+              </Row>
             </>
           )}
         </Column>
