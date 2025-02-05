@@ -380,7 +380,7 @@ export default function Home() {
                 marginBottom="m"
               >
                 <img
-                  src="/images/projects/project-01/GradProject.jpg"
+                  src="/images/GradProject.jpg"
                   width={600}
                   height={600}
                 ></img>
