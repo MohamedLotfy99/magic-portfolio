@@ -106,23 +106,23 @@ const about = {
   },
   courses: {
     display: true, // set to false to hide this section
-    title: "Courses",
+    title: "Workshops",
     institutions: [
       {
-        name: "Ethical Hacking Workshop",
+        name: "Ethical Hacking",
         role: "NTI Egypt",
         timeframe: "Sept 2022",
         description: <>Studied vulnerability detection, exploitation, prevention, and
           security awareness.</>,
       },
       {
-        name: "Data Science Workshop",
+        name: "Data Science",
         role: "Sprints",
         timeframe: "Sept 2021",
         description: <>Studied data cleaning, organization, and categorization.</>,
       },
       {
-        name: "Android Development Workshop",
+        name: "Android Development",
         role: "Sprints",
         timeframe: "Sept 2020",
         description: <>Studied Rest APIs, data storage & manipulation, layouts and style creation.</>,
@@ -137,10 +137,10 @@ const about = {
         title: "Expert",
         achievements: [
           <>
-            Android Studio
+            Android
           </>,
           <>
-            Unreal Engine
+            UE5
           </>,
           <>
             Python
@@ -167,7 +167,7 @@ const about = {
         ],
       },
       {
-        title: "Intermediate",
+        title: "Good",
         // optional: leave the array empty if you don't want to display images
         achievements: [
           <>

@@ -366,14 +366,14 @@ export default function About() {
               </Heading>
               <Row fillWidth gap="l">
                 {about.technical.skills.map((skill, index) => (
-                  <Column key={`${skill.title}-${index}`} fillWidth gap="4">
+                  <Column key={`${skill.title}-${index}`} fillWidth gap="m">
                     <Text variant="heading-strong-l">{skill.title}</Text>
                     <Column>
                       {skill.achievements?.map(
                         (achievement: JSX.Element, index: number) => (
                           <Text
                             as="li"
-                            variant="heading-default-xs"
+                            variant="body-default-s"
                             onBackground="neutral-weak"
                             key={`${skill.title}-${index}`}
                           >
