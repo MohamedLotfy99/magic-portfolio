@@ -37,7 +37,13 @@ export async function generateMetadata() {
 
 export default function Home() {
   return (
-    <Column maxWidth="m" gap="xl" horizontal="center">
+    <Column
+      maxWidth="l"
+      marginLeft="xl"
+      paddingLeft="m"
+      gap="l"
+      horizontal="center"
+    >
       <script
         type="application/ld+json"
         suppressHydrationWarning
@@ -57,7 +63,7 @@ export default function Home() {
           }),
         }}
       />
-      <Column fillWidth paddingY="l" gap="m">
+      <Column fillWidth paddingY="l">
         <Column maxWidth="s">
           <RevealFx
             translateY="4"
@@ -124,8 +130,8 @@ export default function Home() {
         >
           <Heading variant="heading-strong-xl">Web</Heading>
         </RevealFx>
-        <Column fillWidth paddingY="l" gap="m">
-          <Column maxWidth="s">
+        <Column fillWidth paddingY="l">
+          <Column maxWidth="l" paddingRight="xl">
             <RevealFx translateY="4" delay={0.2} fillWidth horizontal="start">
               <Text variant="heading-strong-l" onBackground="brand-weak">
                 Amazon Management System (AMS)
@@ -133,7 +139,7 @@ export default function Home() {
             </RevealFx>
             <RevealFx translateY="4" delay={0.2} fillWidth horizontal="start">
               <Text
-                variant="heading-default-m"
+                variant="body-default-l"
                 onBackground="neutral-weak"
                 marginTop="s"
               >
@@ -154,7 +160,7 @@ export default function Home() {
             </RevealFx>
             <RevealFx translateY="4" delay={0.2} fillWidth horizontal="start">
               <Text
-                variant="heading-default-m"
+                variant="body-default-l"
                 onBackground="neutral-weak"
                 marginTop="s"
                 marginBottom="m"
@@ -172,6 +178,7 @@ export default function Home() {
             delay={0.2}
             fillWidth
             horizontal="center"
+            marginBottom="m"
             marginTop="xl"
           >
             <Heading variant="heading-strong-xl">Android</Heading>
@@ -185,7 +192,7 @@ export default function Home() {
               </RevealFx>
               <RevealFx translateY="4" delay={0.2} fillWidth horizontal="start">
                 <Text
-                  variant="heading-default-m"
+                  variant="body-default-l"
                   onBackground="neutral-weak"
                   marginTop="s"
                 >
@@ -205,7 +212,7 @@ export default function Home() {
               </RevealFx>
               <RevealFx translateY="4" delay={0.2} fillWidth horizontal="start">
                 <Text
-                  variant="heading-default-m"
+                  variant="body-default-l"
                   onBackground="neutral-weak"
                   marginTop="s"
                 >
@@ -228,6 +235,7 @@ export default function Home() {
                 <Text
                   variant="heading-strong-l"
                   onBackground="brand-weak"
+                  marginBottom="m"
                   marginTop="xl"
                 >
                   WelcherArtikel
@@ -235,7 +243,7 @@ export default function Home() {
               </RevealFx>
               <RevealFx translateY="4" delay={0.2} fillWidth horizontal="start">
                 <Text
-                  variant="heading-default-m"
+                  variant="body-default-l"
                   onBackground="neutral-weak"
                   marginTop="s"
                   marginBottom="m"
@@ -277,14 +285,20 @@ export default function Home() {
           </RevealFx>
           <Column fillWidth>
             <Column maxWidth="l">
-              <RevealFx translateY="4" delay={0.2} fillWidth horizontal="start">
+              <RevealFx
+                translateY="4"
+                delay={0.2}
+                fillWidth
+                horizontal="start"
+                marginTop="s"
+              >
                 <Text variant="heading-strong-l" onBackground="brand-weak">
                   Pedestrian Traffic Simulation
                 </Text>
               </RevealFx>
               <RevealFx translateY="4" delay={0.2} fillWidth horizontal="start">
                 <Text
-                  variant="heading-default-m"
+                  variant="body-default-l"
                   onBackground="neutral-weak"
                   marginTop="s"
                 >
@@ -304,7 +318,7 @@ export default function Home() {
               </RevealFx>
               <RevealFx translateY="4" delay={0.2} fillWidth horizontal="start">
                 <Text
-                  variant="heading-default-m"
+                  variant="body-default-l"
                   onBackground="neutral-weak"
                   marginTop="s"
                   marginBottom="m"
@@ -313,16 +327,6 @@ export default function Home() {
                   temperature above a certain level, uses semaphores to prevent
                   race conditions and interrupts for task handling.
                 </Text>
-              </RevealFx>
-              <RevealFx
-                translateY="4"
-                delay={0.2}
-                fillWidth
-                horizontal="center"
-                marginTop="xl"
-                marginBottom="m"
-              >
-                <img src="/images/ConnSim.jpg" width={1100} height={600}></img>
               </RevealFx>
             </Column>
           </Column>
@@ -340,14 +344,20 @@ export default function Home() {
           </RevealFx>
           <Column fillWidth>
             <Column maxWidth="l">
-              <RevealFx translateY="4" delay={0.2} fillWidth horizontal="start">
+              <RevealFx
+                translateY="4"
+                delay={0.2}
+                fillWidth
+                horizontal="start"
+                marginTop="s"
+              >
                 <Text variant="heading-strong-l" onBackground="brand-weak">
                   A Giants Conscience: The Evil Seed
                 </Text>
               </RevealFx>
               <RevealFx translateY="4" delay={0.2} fillWidth horizontal="start">
                 <Text
-                  variant="heading-default-m"
+                  variant="body-default-l"
                   onBackground="neutral-weak"
                   marginTop="s"
                 >
@@ -382,7 +392,7 @@ export default function Home() {
               </RevealFx>
               <RevealFx translateY="4" delay={0.2} fillWidth horizontal="start">
                 <Text
-                  variant="heading-default-m"
+                  variant="body-default-l"
                   onBackground="neutral-weak"
                   marginTop="s"
                 >
@@ -403,7 +413,7 @@ export default function Home() {
               </RevealFx>
               <RevealFx translateY="4" delay={0.2} fillWidth horizontal="start">
                 <Text
-                  variant="heading-default-m"
+                  variant="body-default-l"
                   onBackground="neutral-weak"
                   marginTop="s"
                 >
@@ -436,7 +446,7 @@ export default function Home() {
               </RevealFx>
               <RevealFx translateY="4" delay={0.2} fillWidth horizontal="start">
                 <Text
-                  variant="heading-default-m"
+                  variant="body-default-l"
                   onBackground="neutral-weak"
                   marginTop="s"
                 >
@@ -457,7 +467,7 @@ export default function Home() {
               </RevealFx>
               <RevealFx translateY="4" delay={0.2} fillWidth horizontal="start">
                 <Text
-                  variant="heading-default-m"
+                  variant="body-default-l"
                   onBackground="neutral-weak"
                   marginTop="s"
                 >

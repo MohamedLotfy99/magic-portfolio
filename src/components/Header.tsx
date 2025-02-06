@@ -74,9 +74,7 @@ export const Header = () => {
           fillWidth
           vertical="center"
           textVariant="body-default-s"
-        >
-          {display.location && <Flex hide="s">{person.location}</Flex>}
-        </Flex>
+        ></Flex>
         <Flex fillWidth horizontal="center">
           <Flex
             background="surface"
@@ -115,7 +113,7 @@ export const Header = () => {
             </Flex>
           </Flex>
         </Flex>
-        <Flex fillWidth horizontal="end" vertical="center">
+        <Flex fillWidth vertical="center">
           <Flex
             paddingRight="12"
             horizontal="end"
