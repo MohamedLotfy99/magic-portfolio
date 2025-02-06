@@ -375,11 +375,7 @@ export default function Home() {
                 marginTop="xl"
                 marginBottom="m"
               >
-                <img
-                  src="/images/GradProject.jpg"
-                  width={600}
-                  height={600}
-                ></img>
+                <img src="/images/GradPr.png" width={360} height={600}></img>
               </RevealFx>
               <RevealFx translateY="4" delay={0.2} fillWidth horizontal="start">
                 <Text

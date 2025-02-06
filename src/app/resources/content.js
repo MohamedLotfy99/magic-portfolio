@@ -179,6 +179,9 @@ const about = {
           <>
             TypeScript
           </>,
+          <>
+            GreenFoot
+          </>,
         ],
         images: [
 
@@ -191,10 +194,9 @@ const about = {
             SQL
           </>,
           <>
-            Autopsy
+            C++
           </>,
-          <>OSForensics</>,
-          <>WinHex</>,
+          <>Autopsy</>,
         ],
         images: [
 
