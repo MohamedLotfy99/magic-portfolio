@@ -70,7 +70,7 @@ const about = {
     title: "Introduction",
     description: (
       <>
-        Mohamed is an Experienced Full Stack Developer proficient in multiple programming languages, with a strong focus on front-end development and Android applications. 
+        Mohamed is an Experienced Full Stack Developer proficient in multiple programming languages, with a strong focus on front-end development and Android applications.
         Skilled in building dynamic, user-friendly interfaces. Passionate about game development, always exploring innovative technologies to create engaging digital experiences.
       </>
     ),
@@ -113,7 +113,7 @@ const about = {
         role: "NTI Egypt",
         timeframe: "Sept 2022",
         description: <>Studied vulnerability detection, exploitation, prevention, and
-        security awareness.</>,
+          security awareness.</>,
       },
       {
         name: "Data Science Workshop",
@@ -147,7 +147,7 @@ const about = {
           </>,
           <>
             Kotlin
-          </>,         
+          </>,
           <>
             JavaScript
           </>,
@@ -169,7 +169,7 @@ const about = {
       {
         title: "Intermediate",
         // optional: leave the array empty if you don't want to display images
-        achievements:[
+        achievements: [
           <>
             Angular
           </>,
@@ -205,4 +205,4 @@ const about = {
 };
 
 
-export { person, social, home, about};
+export { person, social, home, about };

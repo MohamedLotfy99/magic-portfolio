@@ -114,7 +114,7 @@ export default function Home() {
           </Heading>
         </RevealFx>
       </Column>
-      <Column>
+      <Column maxWidth="l">
         <RevealFx
           translateY="4"
           delay={0.2}
@@ -124,8 +124,8 @@ export default function Home() {
         >
           <Heading variant="heading-strong-xl">Web</Heading>
         </RevealFx>
-        <Column fillWidth>
-          <Column maxWidth="l">
+        <Column fillWidth paddingY="l" gap="m">
+          <Column maxWidth="s">
             <RevealFx translateY="4" delay={0.2} fillWidth horizontal="start">
               <Text variant="heading-strong-l" onBackground="brand-weak">
                 Amazon Management System (AMS)
